@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    --black: #0D114F;
+}
+
+main input{
+    width: 15rem;
+    height: 2.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    border: .12rem solid var(--black);
+    border-radius: 0.3rem;
+    padding: .2rem;
+    margin-right: .25rem;
+    outline: none;
+}
+
+main select{
+    width: 4.5rem;
+    height: 2.5rem;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    border: .12rem solid var(--black);
+    border-radius: 0.3rem;
+}
