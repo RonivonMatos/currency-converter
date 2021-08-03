@@ -19,7 +19,7 @@ function App() {
   const[fromCurrency, setFromCurrency] = useState('')
   const[toCurrency, setToCurrency] = useState('')
 
-  const[stateOfError, setStateOfError] = useState('normal')
+  const[error, setError] = useState('normal')
 
   useEffect(() => {
     console.log('usedTheFirst')
@@ -62,10 +62,10 @@ console.log("countries before")
   function updateAmount(event){
     let newAmount = event.target.value
     if(isNaN(newAmount) && newAmount!==""){
-      setStateOfError('error')
+      setError('error')
     }
     else{
-      setStateOfError('normal')
+      setError('normal')
       setAmount(newAmount)
     }
   }
@@ -88,7 +88,7 @@ console.log("countries before")
            onChangeValue={updateAmount}
            maxLength={"9"}
            />
-          <p id={stateOfError}>Input must be a number</p>
+          <p id={error}>Input must be a number</p>
         </div>
          <div className="swap-button">
         <button onClick={onClickButton}>
